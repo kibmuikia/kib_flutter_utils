@@ -1,0 +1,27 @@
+name: kib_flutter_utils
+description: "A curated collection of reusable Flutter utilities and helper widgets designed to streamline mobile app development. Ideal for developers aiming to build scalable and maintainable Flutter applications with less repetitive code."
+version: 1.0.100
+homepage: "https://github.com/kibmuikia/kib_flutter_utils"
+
+environment:
+  sdk: ^3.7.2
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  # To add assets to your package, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
