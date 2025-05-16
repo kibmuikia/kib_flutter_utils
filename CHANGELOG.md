@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.101
+* Update README.md
+
 ## 1.0.100
 
 * Added custom exception classes in `error_utils/exceptions.dart`

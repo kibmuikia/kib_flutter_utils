@@ -1,4 +1,4 @@
-# KIB Flutter Utils
+# Kib Flutter Utils
 
 A collection of Flutter utility classes and functions to simplify common tasks in Flutter development.
 
