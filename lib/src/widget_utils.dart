@@ -248,7 +248,6 @@ abstract class StatelessWidgetK extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    kprint.lg('build: $tag');
     final theme = Theme.of(context);
     return buildWithTheme(context, theme, theme.colorScheme, theme.textTheme);
   }
