@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.103
+* add StateManagementK mixin for enhanced state management capabilities
+
 ## 1.0.102
 * remove debug print statement from StatelessWidgetK build method
 
