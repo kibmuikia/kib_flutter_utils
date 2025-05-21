@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.102
+* remove debug print statement from StatelessWidgetK build method
+
 ## 1.0.101
 * Update README.md
 
