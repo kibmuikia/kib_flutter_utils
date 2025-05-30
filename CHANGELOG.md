@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.104
+* add LocalProviderUtils.
+
 ## 1.0.103
 * add StateManagementK mixin for enhanced state management capabilities
 
