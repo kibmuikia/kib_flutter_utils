@@ -22,6 +22,10 @@ import 'package:kib_utils/kib_utils.dart' show Result;
 /// - Automatic logging of widget lifecycle events
 /// - Required tagging for better debugging
 /// - Theme data access in the state class
+/// - Const constructor support for performance optimization
+///
+/// Both [key] and [tag] are required parameters. The [tag] must be a non-empty
+/// string identifier used for logging and debugging purposes.
 ///
 /// Example usage:
 /// ```dart
@@ -29,44 +33,26 @@ import 'package:kib_utils/kib_utils.dart' show Result;
 ///   final String title;
 ///
 ///   const MyCustomWidget({
-///     Key? key,
+///     required super.key,
+///     required super.tag,
 ///     required this.title,
-///   }) : super(key: key, tag: 'MyCustomWidget');
+///   });
 ///
 ///   @override
 ///   StateK<StatefulWidgetK> createState() => _MyCustomWidgetState();
 /// }
-///
-/// class _MyCustomWidgetState extends StateK<MyCustomWidget> {
-///   @override
-///   Widget buildWithTheme(BuildContext context) {
-///     return Column(
-///       children: [
-///         Text(
-///           widget.title,
-///           style: textTheme.headlineMedium?.copyWith(
-///             color: colorScheme.primary,
-///           ),
-///         ),
-///         ElevatedButton(
-///           onPressed: () => informUser('Button pressed'),
-///           child: const Text('Press Me'),
-///         ),
-///       ],
-///     );
-///   }
-/// }
 /// ```
 abstract class StatefulWidgetK extends StatefulWidget {
-  /// Unique identifier for this widget, used for logging and debugging
+  /// Unique identifier for this widget, used for logging and debugging.
+  /// Must be a non-empty string.
   final String tag;
 
-  /// Creates a [StatefulWidgetK] with the specified [tag].
+  /// Creates a [StatefulWidgetK] with the required [key] and [tag].
   ///
-  /// The [tag] parameter is required and must not be empty.
-  /// It is used for logging lifecycle events and improving debugging.
-  StatefulWidgetK({super.key, required this.tag})
-    : assert(tag.isNotEmpty, 'Tag must not be empty');
+  /// Both parameters are required:
+  /// - [key] is required for proper widget identification
+  /// - [tag] is required for logging and debugging (must not be empty)
+  const StatefulWidgetK({required super.key, required this.tag});
 
   @override
   StateK<StatefulWidgetK> createState();
