@@ -1,6 +1,6 @@
 name: kib_flutter_utils
 description: "A curated collection of reusable Flutter utilities and helper widgets designed to streamline mobile app development. Ideal for developers aiming to build scalable and maintainable Flutter applications with less repetitive code."
-version: 1.0.104
+version: 1.0.105
 homepage: "https://github.com/kibmuikia/kib_flutter_utils"
 issue_tracker: "https://github.com/kibmuikia/kib_flutter_utils/issues"
 documentation: "https://github.com/kibmuikia/kib_flutter_utils#readme"

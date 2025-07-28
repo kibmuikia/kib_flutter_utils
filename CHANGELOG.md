@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.0.105
+### 🔧 StatefulWidgetK
+- **BREAKING CHANGE**: Made `key` parameter required and removed `assert` statements to enable `const` constructor usage
+- Improved performance optimization by maintaining const constructor compatibility
+
+### ✨ StateManagementK Enhancements
+- **New Features**:
+  - Added `_statusMessage` private field for status tracking
+  - Added getter methods for `_statusMessage` and utils for `_error`
+  
+- **New Utility Methods**:
+  - `startLoading()` - Initialize loading state
+  - `resetAllStates()` - Reset all state variables to default
+  - `updateState()` - Generic state update helper
+  - `setStatusMessage()` - Update status message with validation
+
+
+
 ## 1.0.104
 * add LocalProviderUtils.
 
