@@ -180,6 +180,10 @@ abstract class StateK<T extends StatefulWidgetK> extends State<T> {
 /// - Required tagging for better debugging
 /// - Convenient theme data access in the build method
 /// - Helper method for showing user messages
+/// - Const constructor support for performance optimization
+///
+/// Both [key] and [tag] are required parameters. The [tag] must be a non-empty
+/// string identifier used for logging and debugging purposes.
 ///
 /// Example usage:
 /// ```dart
@@ -188,10 +192,11 @@ abstract class StateK<T extends StatefulWidgetK> extends State<T> {
 ///   final String content;
 ///
 ///   const MyInfoCard({
-///     Key? key,
+///     required super.key,
+///     required super.tag,
 ///     required this.title,
 ///     required this.content,
-///   }) : super(key: key, tag: 'MyInfoCard');
+///   });
 ///
 ///   @override
 ///   Widget buildWithTheme(
@@ -222,15 +227,16 @@ abstract class StateK<T extends StatefulWidgetK> extends State<T> {
 /// }
 /// ```
 abstract class StatelessWidgetK extends StatelessWidget {
-  /// Unique identifier for this widget, used for logging and debugging
+  /// Unique identifier for this widget, used for logging and debugging.
+  /// Must be a non-empty string.
   final String tag;
 
-  /// Creates a [StatelessWidgetK] with the specified [tag].
+  /// Creates a [StatelessWidgetK] with the required [key] and [tag].
   ///
-  /// The [tag] parameter is required and must not be empty.
-  /// It is used for logging builds and improving debugging.
-  StatelessWidgetK({super.key, required this.tag})
-    : assert(tag.isNotEmpty, 'Tag must not be empty');
+  /// Both parameters are required:
+  /// - [key] is required for proper widget identification
+  /// - [tag] is required for logging and debugging (must not be empty)
+  const StatelessWidgetK({required super.key, required this.tag});
 
   @override
   Widget build(BuildContext context) {
