@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.106]
+
+### 🔧 StatelessWidgetK
+- **BREAKING CHANGE**: Made `key` parameter required and removed `assert` statements to enable `const` constructor usage
+- Improved performance optimization by maintaining const constructor compatibility
+- Enhanced documentation with clearer usage examples and parameter requirements
+
 ## 1.0.105
 ### 🔧 StatefulWidgetK
 - **BREAKING CHANGE**: Made `key` parameter required and removed `assert` statements to enable `const` constructor usage
